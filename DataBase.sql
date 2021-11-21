@@ -34,10 +34,6 @@ ENGINE = INNODB DEFAULT CHARSET=LATIN1;
 
 BEGIN;
 INSERT INTO `UTENTE` VALUES
-('CNCGPP96L31L738B','Giuseppe','Cancello Tortora','Proponente/Fruitore','3881188219','Venosa','Via Berta','15','85029','2017-08-31', 1),
-('LGNNDR97L17A952S','Andrea','Lagna','Proponente/Fruitore','3921061204','Capannori','Via Corte Pellegrini','32','55012','2017-09-21', 1),
-('RGNLCU69H53L738B','Lucia','Argenti','Proponente/Fruitore','3881186064','Venosa','Via Berta','15','85029','2016-04-15', 1),
--- ('MRNTZN80A01E715J','Tiziano', 'Mariani', '3978465236', 'Pisa','Via Di Gello','106','56123','2018-02-26', 1),
 ('CRCGAI93E71G491C','Gaia', 'Cerchai', 'Fruitore','3694565147', 'Lucca','Via Fillungo','15','55100','2015-07-19', 1),
 ('PLNCST66S01G702Y','Cristian', 'Paolinelli','Fruitore','3692586147','Cascina','Via Roma','15','56021','2018-09-17', 1),
 ('MNFNCL72M12E715V','Nicola', 'Manfredi','Fruitore','3654521459','Pisa','Via Lucchese','5','56100','2014-12-12', 1),
@@ -84,9 +80,6 @@ ENGINE = INNODB DEFAULT CHARSET=LATIN1;
 
 BEGIN;
 INSERT INTO `FRUITORE` VALUES
-('PeppoCT','Peppe1996','Quanti fratelli?','2', 1,'CNCGPP96L31L738B'),
-('MarcoMattei','Alice','Quale sport pratichi?','Calcio', 1,'LGNNDR97L17T698P'),
-('Lucy','cargiuros','Quanti figli?','3', 1,'RGNLCU69H53L738B'),
 ('GaiaCer','Gaia222','Nome del padre?','Luca', 1,'CRCGAI93E71G491C'),
 ('PaoCri','Nelli123','Nome del cane?','Teddy', 1,'PLNCST66S01G702Y'),
 ('Nicredi','Nic72','Squadra preferita?','Juventus', 1,'MNFNCL72M12E715V'),
@@ -114,9 +107,6 @@ BEGIN;
 INSERT INTO `PROPONENTE` VALUES
 ('Beniste','Stefi70','Colore preferito?','Rosso', 1, 6,'BNGSFN70M56I726M'),
 ('PaoCri','Fifa09','Animale preferito?','Cane', 1, 8,'PLNCST66S01G702Y'),
-('PeppoCT','Peppe1996','Quanti fratelli?','2', 1, 7,'CNCGPP96L31L738B'),
-('MarcoMattei','Alice','Quale sport pratichi?','Calcio', 1, 9,'LGNNDR97L17A952S'),
-('Lucy','cargiuros','Quanti figli?','3', 1, 3,'RGNLCU69H53L738B'),
 ('Sillabus','Sill78','Nome madre?','Sara', 1, 7,'SLLFNC78S15H501V'),
 ('SisiDavi','Pass123','Quale sport segui?','Hockey', 0, 0,'SSIDVD73M18D612R'),
 ('SteFre','Lucca','Marca del cellulare?','Apple', 1, 2,'FRDSFN59H14F205X');
@@ -165,8 +155,6 @@ ENGINE = INNODB DEFAULT CHARSET=LATIN1;
 
 BEGIN;
 INSERT INTO `DOCUMENTO` VALUES
-('AX597859','Carta di identita','2022-07-31','Comune di Venosa',1,'CNCGPP96L31L738B'),
-('AZ597845','Carta di identita','2019-07-17','Comune di Capannori', 1,'LGNNDR97L17A952S'),
 ('PI967456','Patente di guida','2025-12-28','Motorizzazione di Pisa', 1,'SLLFNC78S15H501V');
 COMMIT;
 
@@ -272,12 +260,6 @@ BEGIN;
 INSERT INTO `FRUIBILITA` VALUES
 (NULL,'EK982BB','2018-11-10','01:00:00','06:00:00'),
 (NULL,'EK982BB','2018-11-10','14:30:00','16:25:00'),
-(NULL,'EK982BB','2018-11-10','20:00:00','24:00:00'),
-(NULL,'DT909MK','2018-11-10','00:01:00','05:00:00'),
-(NULL,'DT909MK','2018-11-10','09:00:00','14:00:00'),
-(NULL,'DT909MK','2018-11-10','19:30:00','22:45:00'),
-(NULL,'DT909MK','2018-10-12','06:30:00','11:45:00'),
-(NULL,'DT909MK','2018-12-14','13:00:00','20:30:00'),
 (NULL,'CJ646LO','2018-11-10','02:00:00','10:15:00'),
 (NULL,'CJ646LO','2018-11-10','13:30:00','14:30:00'),
 (NULL,'CJ646LO','2018-11-10','18:30:00','19:25:00'),
@@ -373,8 +355,6 @@ ENGINE = INNODB DEFAULT CHARSET=LATIN1;
 BEGIN;
 INSERT INTO `PRENOTAZIONENOLEGGIO` VALUES
 ('00001','2018-02-20','2018-02-25',1,'FK982BB','SisiDavi',00001),
-('00002','2018-03-05','2018-03-09',1,'DT909MK','PeppoCT',00006),
-('00003','2018-04-29','2018-05-01',0,'FW573ZB','Lucy',00010),
 ('00004','2018-05-15','2018-05-17',1,'CJ646LO','MarcoMattei',00009),
 ('00005','2018-06-05','2018-06-08',1,'FZ646MM','SteFre',00004),
 ('00006','2018-10-29','2018-11-01',0,'CJ646LO','MarcoMattei',00008);
